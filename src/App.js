@@ -8,10 +8,12 @@ import {MenuDataProvider} from "./contexts/MenuDataContext";
 import React from "react";
 
 function ProvidedApp() {
-    return <Container fluid className="p-0 p-md-3 p-lg-5">
-        <MenuNavbar/>
-        <MenuCard/>
-    </Container>
+    return <>
+        <Container fluid className="p-0 p-md-3 p-lg-5">
+            <MenuNavbar/>
+            <MenuCard/>
+        </Container>
+    </>
 }
 
 function App() {
