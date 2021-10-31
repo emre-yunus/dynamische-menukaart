@@ -4,8 +4,9 @@ import './App.css';
 import {Container} from "react-bootstrap";
 import {MenuNavbar} from "./components/MenuNavbar";
 import {MenuCard} from "./components/MenuCard";
-import {MenuDataProvider} from "./contexts/MenuDataContext";
+import {MenuDataProvider} from "./contexts/menuDataContext";
 import React from "react";
+import {MessageProvider} from "./contexts/messageContext";
 
 function ProvidedApp() {
     return <>
@@ -17,9 +18,11 @@ function ProvidedApp() {
 }
 
 function App() {
-    return <MenuDataProvider>
-        <ProvidedApp/>
-    </MenuDataProvider>
+    return <MessageProvider>
+        <MenuDataProvider>
+            <ProvidedApp/>
+        </MenuDataProvider>
+    </MessageProvider>
 }
 
 export default App;

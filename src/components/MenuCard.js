@@ -1,6 +1,6 @@
 import {Row} from "react-bootstrap";
 import {Category} from "./Category";
-import {useMenuDataContext} from "../contexts/MenuDataContext";
+import {useMenuDataContext} from "../contexts/menuDataContext";
 
 export function MenuCard() {
     const {menuData} = useMenuDataContext();
